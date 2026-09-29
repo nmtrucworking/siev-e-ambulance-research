@@ -1,0 +1,17 @@
+{
+  "raw": {
+    "south": 10.677924,
+    "north": 10.855636,
+    "west": 106.555227,
+    "east": 106.802642,
+    "approx_north_south_km": 19.783,
+    "approx_east_west_km": 27.057
+  },
+  "suggested_graph_download_bbox_with_2km_margin": {
+    "south": 10.659958,
+    "north": 10.873602,
+    "west": 106.536939,
+    "east": 106.82093,
+    "note": "2 km ch\u1ec9 l\u00e0 download margin th\u1ef1c d\u1ee5ng; kh\u00f4ng ph\u1ea3i tham s\u1ed1 khoa h\u1ecdc c\u1ed1 \u0111\u1ecbnh."
+  }
+}

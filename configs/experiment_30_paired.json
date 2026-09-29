@@ -1,0 +1,22 @@
+{
+  "experiment_id": "paired30_v1",
+  "scenarios": [
+    "normal",
+    "peak",
+    "high_demand"
+  ],
+  "replications_per_scenario": 30,
+  "incidents_per_replication": 100,
+  "policies": [
+    "B0",
+    "B3",
+    "B4",
+    "B6"
+  ],
+  "common_random_numbers": true,
+  "paired_analysis_unit": "scenario_id x replication_id",
+  "expected_exogenous_realizations": 90,
+  "expected_policy_runs": 360,
+  "traffic_mode": "freeflow_reference_until_calibrated",
+  "warning": "Do not interpret as final HCMC traffic evidence until OSMnx routing artifacts exist and local traffic/operating assumptions are calibrated or sensitivity-tested."
+}

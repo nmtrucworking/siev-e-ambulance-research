@@ -1,0 +1,6 @@
+reserve_soc_pct,reference_feasible_rate,interpretation
+10,0.903,reference snapshot only; near-flat result indicates insufficient energy stress
+15,0.901,reference snapshot only; near-flat result indicates insufficient energy stress
+20,0.899,reference snapshot only; near-flat result indicates insufficient energy stress
+25,0.896,reference snapshot only; near-flat result indicates insufficient energy stress
+30,0.892,reference snapshot only; near-flat result indicates insufficient energy stress

@@ -1,0 +1,7 @@
+required_specialty,incident_count,supporting_hospital_count,supporting_hospital_ids,coverage_flag
+pediatrics,1553,1,H006,OK
+obstetrics,1535,2,H003|H005,OK
+stroke,1478,3,H001|H002|H003,OK
+cardiology,1464,4,H001|H002|H003|H004,OK
+general,1453,4,H001|H002|H003|H004,OK
+trauma,1517,4,H001|H002|H003|H004,OK

@@ -1,0 +1,11 @@
+scenario_id,replication_id,policy_id,incident_id,violation_type,candidate_id
+normal,R001,B6,NO_R001_I011,response_sla,NO_R001_I011__A09__H003
+normal,R001,B6,NO_R001_I020,response_sla,NO_R001_I020__A02__H003
+normal,R001,B6,NO_R001_I022,response_sla,NO_R001_I022__A09__H003
+normal,R001,B6,NO_R001_I023,response_sla,NO_R001_I023__A06__H002
+normal,R001,B6,NO_R001_I050,response_sla,NO_R001_I050__A09__H003
+normal,R001,B6,NO_R001_I056,response_sla,NO_R001_I056__A02__H004
+normal,R001,B6,NO_R001_I063,response_sla,NO_R001_I063__A04__H003
+normal,R001,B6,NO_R001_I071,response_sla,NO_R001_I071__A05__H001
+normal,R001,B6,NO_R001_I098,response_sla,NO_R001_I098__A01__H003
+normal,R001,B6,NO_R001_I100,response_sla,NO_R001_I100__A01__H003

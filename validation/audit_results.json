@@ -1,0 +1,89 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "check": "replication_count_90",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "check": "incident_count_9000",
+      "pass": true,
+      "detail": 9000
+    },
+    {
+      "check": "incident_ids_unique",
+      "pass": true,
+      "detail": 9000
+    },
+    {
+      "check": "100_incidents_per_scenario_rep",
+      "pass": true,
+      "detail": {
+        "groups": 90,
+        "min": 100,
+        "max": 100
+      }
+    },
+    {
+      "check": "90_unique_seeds",
+      "pass": true,
+      "detail": 90
+    },
+    {
+      "check": "initial_soc_range",
+      "pass": true,
+      "detail": "0..100"
+    },
+    {
+      "check": "battery_capacity_positive",
+      "pass": true,
+      "detail": ">0"
+    },
+    {
+      "check": "capacity_row_count_51840",
+      "pass": true,
+      "detail": 51840
+    },
+    {
+      "check": "capacity_nonnegative",
+      "pass": true,
+      "detail": ">=0"
+    },
+    {
+      "check": "capacity_not_above_nominal",
+      "pass": true,
+      "detail": "<= nominal"
+    },
+    {
+      "check": "candidate_count_540000",
+      "pass": true,
+      "detail": 540000
+    },
+    {
+      "check": "candidate_ids_unique",
+      "pass": true,
+      "detail": 540000
+    },
+    {
+      "check": "reference_no_charging_assignments",
+      "pass": true,
+      "detail": "hard feasibility excludes charging"
+    },
+    {
+      "check": "reference_soc_valid",
+      "pass": true,
+      "detail": "reserve respected"
+    },
+    {
+      "check": "reference_capacity_valid",
+      "pass": true,
+      "detail": "capacity respected"
+    },
+    {
+      "check": "reference_role_labeled",
+      "pass": true,
+      "detail": "reference-only"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+hospital_id,hospital_name,latitude,longitude,supported_specialties,emergency_receiving_flag,nominal_model_capacity,data_origin,capacity_interpretation
+H001,Cho Ray Hospital,10.757879,106.659528,general|trauma|cardiology|stroke|burn|toxicology,1,5,project_curated_profile,modeled_receiving_capacity_not_actual_beds
+H002,People's Hospital 115,10.775036,106.667585,general|stroke|neurology|cardiology|trauma,1,5,project_curated_profile,modeled_receiving_capacity_not_actual_beds
+H003,Gia Dinh People's Hospital,10.803963,106.694203,general|trauma|cardiology|stroke|obstetrics,1,4,project_curated_profile,modeled_receiving_capacity_not_actual_beds
+H004,Trung Vuong Hospital,10.770848,106.659957,general|trauma|burn|cardiology|neurology,1,4,project_curated_profile,modeled_receiving_capacity_not_actual_beds
+H005,Tu Du Hospital,10.768647,106.686545,obstetrics|neonatal,1,3,project_curated_profile,modeled_receiving_capacity_not_actual_beds
+H006,Children's Hospital 1,10.768907,106.670338,pediatrics|neonatal|pediatric_cardiology|pediatric_trauma,1,4,project_curated_profile,modeled_receiving_capacity_not_actual_beds

@@ -1,0 +1,2 @@
+# Canonical complete environment for the research pipeline.
+-r requirements-full.txt

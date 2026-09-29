@@ -1,0 +1,124 @@
+field_name,data_type,unit,domain_or_range,nullable,key_role,origin_flag,provenance_or_formula,role
+scenario_id,string,,scenario key,no,PK-part,synthetic,scenario definition,experiment grouping
+replication_id,string,,replication key,no,PK-part,synthetic,generator,independent replication
+random_seed,integer,,positive integer,no,,synthetic,generator,reproducibility
+incident_id,string,,unique,no,PK,synthetic,generator,call identity
+timestamp,datetime,UTC,monotonic within event sequence,no,,synthetic,generator,decision epoch
+priority,category,,P1|P2|P3|P4,no,,synthetic,scenario,objective/evaluation
+required_specialty,category,,controlled vocabulary,no,,synthetic,scenario,hospital feasibility
+vehicle_id,string,,unique within replication,no,PK-part,synthetic,generator,fleet identity
+soc_init_pct,float,%,0..100,no,,synthetic,generator,energy state
+battery_capacity_kwh,float,kWh,>0,no,,synthetic/calibrated,vehicle spec,energy constraint
+reserve_soc_pct,float,%,0..100,no,,assumption,parameter registry,energy constraint
+hospital_id,string,,unique,no,PK,observed/curated,official hospital profiles,destination identity
+supported_specialties,string,,pipe-delimited controlled vocab,no,,observed/curated,hospital profile,capability constraint
+capacity_t,integer,modeled slots,>=0,no,,synthetic,scenario,capacity constraint
+candidate_id,string,,unique,no,PK,derived,cartesian index,candidate identity
+travel_time_v_i_min,float,min,>=0,no,,derived,distance*traffic multiplier,objective/SLA
+traction_energy_to_hospital_kwh,float,kWh,>=0,no,,derived,distance*consumption,energy constraint
+candidate_feasible_hard,boolean,,0|1,no,,derived,all hard constraints,feasibility audit
+generator_version,string,,semver-like,no,,derived,software,provenance
+schema_version,string,,semver-like,no,,derived,schema,provenance
+common_random_group,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+start_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+end_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+incident_lat,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+incident_lon,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+urgency_weight,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+max_response_time_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+incident_type,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+service_time_scene_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+equipment_energy_kwh,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+zone_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+latitude,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+longitude,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+vehicle_state_init,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+nominal_consumption_kwh_km,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+available_at_init,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+hospital_name,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+emergency_receiving_flag,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+nominal_model_capacity,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+capacity_state,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+timestamp_bin,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+estimated_wait_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+charger_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+charger_name,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+charger_power_kw,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+ports,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+candidate_vehicle_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+static_index_only,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+vehicle_state,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+soc_before_pct,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+hospital_capability,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+capacity_runtime_t,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+vehicle_to_incident_distance_km,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+incident_to_hospital_distance_km,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+hospital_to_nearest_charger_distance_km,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+freeflow_time_v_i_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+freeflow_time_i_h_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+congestion_multiplier_v_i,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+congestion_multiplier_i_h,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+travel_time_i_h_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+energy_to_nearest_charger_kwh,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+energy_uncertainty_buffer_pct,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+energy_required_safety_kwh,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+soc_after_pct,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+soc_at_nearest_charger_pct,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+availability_pass,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+capability_pass,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+capacity_pass,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+soc_pass,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+sla_pass,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+record_role,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+policy_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+decision_epoch,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+solver_version,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+epsilon_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+epsilon_energy,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+epsilon_hospital,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+objective_urgency_delay,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+objective_response_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+objective_hospital_penalty,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+objective_energy_risk,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+solve_time_sec,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+mip_gap,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+event_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+event_type,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+event_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+soc_before_event_pct,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+soc_after_event_pct,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+available_at,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+hospital_runtime_occupancy,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+mission_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+dispatch_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+scene_arrival_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+scene_depart_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+hospital_arrival_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+handover_complete_time,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+feasible_rate_overall,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+feasible_rate_P1,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+feasible_rate_P2,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+feasible_rate_P3,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+feasible_rate_P4,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+SLA_pass_rate,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+SOC_violation_count,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+hospital_capacity_violations,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+assignments_to_charging,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+avg_response_time_min,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+P95_response_P1,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+time_to_compatible_hospital,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+bootstrap95_feasible_low,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+bootstrap95_feasible_high,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+provenance_id,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+source_name,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+source_type,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+snapshot_date,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+license_or_terms,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+calibration_status,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+content_hash,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+retrieved_at,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+verification_status,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+reserved_extension_100,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+reserved_extension_101,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+reserved_extension_102,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field
+reserved_extension_103,string,,schema-dependent,yes,,derived_or_runtime,see schema/runtime,extension/runtime field

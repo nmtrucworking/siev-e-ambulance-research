@@ -1,0 +1,10 @@
+{
+  "pairs_total_present": 9,
+  "complete_pairs": 9,
+  "all_pairs_complete": true,
+  "scenario_replication_counts": {
+    "high_demand": 3,
+    "normal": 3,
+    "peak": 3
+  }
+}

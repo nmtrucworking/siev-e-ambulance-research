@@ -1,0 +1,64 @@
+{
+  "all_pass": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "checks": [
+    {
+      "check": "common_random_pairing",
+      "passed": true,
+      "detail": [
+        {
+          "scenario_id": "high_demand",
+          "replication_id": "R001",
+          "policy_count": 4,
+          "seed_count": 1,
+          "group_count": 1
+        },
+        {
+          "scenario_id": "normal",
+          "replication_id": "R001",
+          "policy_count": 4,
+          "seed_count": 1,
+          "group_count": 1
+        },
+        {
+          "scenario_id": "peak",
+          "replication_id": "R001",
+          "policy_count": 4,
+          "seed_count": 1,
+          "group_count": 1
+        }
+      ]
+    },
+    {
+      "check": "metrics_count_matches_completed_runs",
+      "passed": true,
+      "detail": "12/12"
+    },
+    {
+      "check": "100_incident_rows_per_run",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "SOC_bounds_0_100",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "policy_hard_constraints",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "event_order_monotonic",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "charging_completion_SOC_nondecreasing",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

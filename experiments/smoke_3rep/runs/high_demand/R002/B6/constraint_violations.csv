@@ -1,0 +1,13 @@
+scenario_id,replication_id,policy_id,incident_id,violation_type,candidate_id
+high_demand,R002,B6,HI_R002_I008,response_sla,HI_R002_I008__A06__H003
+high_demand,R002,B6,HI_R002_I048,response_sla,HI_R002_I048__A03__H003
+high_demand,R002,B6,HI_R002_I057,response_sla,HI_R002_I057__A03__H006
+high_demand,R002,B6,HI_R002_I063,response_sla,HI_R002_I063__A07__H004
+high_demand,R002,B6,HI_R002_I064,response_sla,HI_R002_I064__A09__H004
+high_demand,R002,B6,HI_R002_I065,response_sla,HI_R002_I065__A03__H004
+high_demand,R002,B6,HI_R002_I070,response_sla,HI_R002_I070__A04__H004
+high_demand,R002,B6,HI_R002_I080,response_sla,HI_R002_I080__A02__H001
+high_demand,R002,B6,HI_R002_I088,response_sla,HI_R002_I088__A02__H002
+high_demand,R002,B6,HI_R002_I094,response_sla,HI_R002_I094__A01__H004
+high_demand,R002,B6,HI_R002_I098,response_sla,HI_R002_I098__A03__H003
+high_demand,R002,B6,HI_R002_I099,response_sla,HI_R002_I099__A09__H006

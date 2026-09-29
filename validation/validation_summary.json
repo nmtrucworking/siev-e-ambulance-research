@@ -1,0 +1,6 @@
+{
+  "all_pass": true,
+  "checks_passed": 16,
+  "checks_total": 16,
+  "note": "QA validates synthetic generator consistency; it does not establish calibration to real HCMC EMS."
+}

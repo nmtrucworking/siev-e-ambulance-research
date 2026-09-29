@@ -1,0 +1,53 @@
+{
+  "rows": {
+    "incidents": 9000,
+    "fleet_initial": 900,
+    "hospitals": 6,
+    "charging_stations": 4,
+    "hospital_capacity_timeseries": 51840,
+    "osmnx_points_total": 9910,
+    "osmnx_unique_coordinates": 9910
+  },
+  "bbox": {
+    "raw": {
+      "south": 10.677924,
+      "north": 10.855636,
+      "west": 106.555227,
+      "east": 106.802642,
+      "approx_north_south_km": 19.783,
+      "approx_east_west_km": 27.057
+    },
+    "suggested_graph_download_bbox_with_2km_margin": {
+      "south": 10.659958,
+      "north": 10.873602,
+      "west": 106.536939,
+      "east": 106.82093,
+      "note": "2 km ch\u1ec9 l\u00e0 download margin th\u1ef1c d\u1ee5ng; kh\u00f4ng ph\u1ea3i tham s\u1ed1 khoa h\u1ecdc c\u1ed1 \u0111\u1ecbnh."
+    }
+  },
+  "priority_counts": {
+    "P2": 2893,
+    "P3": 2887,
+    "P1": 1681,
+    "P4": 1539
+  },
+  "specialty_counts": {
+    "pediatrics": 1553,
+    "obstetrics": 1535,
+    "trauma": 1517,
+    "stroke": 1478,
+    "cardiology": 1464,
+    "general": 1453
+  },
+  "fleet_state_counts": {
+    "available": 759,
+    "charging": 86,
+    "maintenance": 55
+  },
+  "soc_init_pct": {
+    "min": 30.02,
+    "mean": 63.776,
+    "median": 65.235,
+    "max": 94.89
+  }
+}

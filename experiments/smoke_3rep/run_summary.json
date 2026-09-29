@@ -1,0 +1,20 @@
+{
+  "scenarios": [
+    "normal",
+    "peak",
+    "high_demand"
+  ],
+  "policies": [
+    "B0",
+    "B3",
+    "B4",
+    "B6"
+  ],
+  "replications_per_scenario_requested": 3,
+  "expected_policy_runs": 36,
+  "completed_policy_runs": 36,
+  "failed_policy_runs": 0,
+  "allow_haversine_fallback": true,
+  "final_evidence_ready": false,
+  "warning": "Haversine fallback is smoke-test routing only; results are not final OSMnx network evidence."
+}

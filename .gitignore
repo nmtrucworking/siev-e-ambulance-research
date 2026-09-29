@@ -1,0 +1,44 @@
+# macOS / editors
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/
+
+# Python
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Local archive: preserved for reference, not part of canonical source
+archive/
+
+# Generated large/runtime artifacts
+# Smoke fixtures under experiments/smoke_* remain versionable.
+data/osmnx/
+data/routing/
+experiments/paired_30/
+experiments/*_local/
+
+# Temporary files
+*.log
+*.tmp

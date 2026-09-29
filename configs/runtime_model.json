@@ -1,0 +1,18 @@
+{
+  "energy_uncertainty_buffer_pct": 15.0,
+  "handover_service_min": 10.0,
+  "hospital_occupancy_hold_min": 30.0,
+  "charge_trigger_pct": 35.0,
+  "charge_target_pct": 80.0,
+  "initial_charging_target_pct": 80.0,
+  "b6_transport_slack_min_p1": 6.0,
+  "b6_transport_slack_min_p2": 10.0,
+  "b6_transport_slack_min_p3": 15.0,
+  "b6_transport_slack_min_p4": 20.0,
+  "b6_energy_fraction_slack": 0.20,
+  "haversine_speed_vehicle_incident_kph": 35.0,
+  "haversine_speed_incident_hospital_kph": 32.0,
+  "haversine_speed_hospital_charger_kph": 35.0,
+  "require_osm_for_final": true,
+  "assumption_note": "Parameters not already present in the source dataset are explicit synthetic operating assumptions for the simulation scaffold and must be calibrated/sensitivity-tested before final scientific interpretation."
+}

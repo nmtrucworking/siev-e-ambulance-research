@@ -1,0 +1,5 @@
+charger_id,charger_name,latitude,longitude,charger_power_kw,ports,data_origin
+C001,Central Charger A,10.769,106.667,120.0,2,synthetic_scenario
+C002,Central Charger B,10.782,106.681,150.0,2,synthetic_scenario
+C003,West Charger,10.755,106.65,100.0,1,synthetic_scenario
+C004,East Charger,10.797,106.705,120.0,2,synthetic_scenario

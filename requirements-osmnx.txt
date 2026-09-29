@@ -1,0 +1,6 @@
+osmnx>=2.1,<3
+scikit-learn>=1.4
+jupyter>=1.0
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8

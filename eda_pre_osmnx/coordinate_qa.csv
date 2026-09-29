@@ -1,0 +1,5 @@
+dataset,rows,missing_lat,missing_lon,invalid_lat,invalid_lon,lat_min,lat_max,lon_min,lon_max,unique_coords,duplicate_coord_rows
+incidents,9000,0,0,0,0,10.677924,10.855636,106.555227,106.802642,9000,0
+fleet_initial,900,0,0,0,0,10.730069754223488,10.799817805476126,106.63013821153918,106.71998234186256,900,0
+hospitals,6,0,0,0,0,10.757879,10.803963,106.659528,106.694203,6,0
+charging_stations,4,0,0,0,0,10.755,10.797,106.65,106.705,4,0

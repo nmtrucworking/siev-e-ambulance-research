@@ -1,0 +1,7 @@
+parameter_name,value,unit,status,source_or_rationale,sensitivity_values
+incidents_per_replication,100,count,controlled_benchmark_assumption,fixed-N benchmark,60|100|150
+replications_per_scenario,30,count,experimental_design,paired common-random-number design,20|30
+reserve_soc_pct,20,%,assumption_to_be_calibrated,EV safety reserve parameter,10|15|20|25|30
+nominal_consumption_kwh_km,0.24,kWh/km,assumption_to_be_calibrated,MVP linear consumption model,0.20|0.24|0.30
+energy_uncertainty_buffer_pct,15,%,assumption_to_be_calibrated,robustness buffer,0|10|15|20|30
+capacity_state_wait_constrained,12,min,synthetic_scenario,project scenario convention,0|12|20
