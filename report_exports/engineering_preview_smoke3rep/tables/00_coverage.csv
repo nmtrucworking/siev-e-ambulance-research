@@ -1,0 +1,13 @@
+scenario_id,policy_id,n_replications
+high_demand,B0,3
+high_demand,B3,3
+high_demand,B4,3
+high_demand,B6,3
+normal,B0,3
+normal,B3,3
+normal,B4,3
+normal,B6,3
+peak,B0,3
+peak,B3,3
+peak,B4,3
+peak,B6,3

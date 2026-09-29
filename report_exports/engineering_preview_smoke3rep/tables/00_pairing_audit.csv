@@ -1,0 +1,10 @@
+scenario_id,replication_id,policy_count,seed_count,common_random_group_count,complete_pair
+high_demand,R001,4,1,1,True
+high_demand,R002,4,1,1,True
+high_demand,R003,4,1,1,True
+normal,R001,4,1,1,True
+normal,R002,4,1,1,True
+normal,R003,4,1,1,True
+peak,R001,4,1,1,True
+peak,R002,4,1,1,True
+peak,R003,4,1,1,True

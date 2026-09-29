@@ -57,3 +57,7 @@ This compiles the Python sources, validates the synthetic dataset, and re-valida
 5. Validate runtime outputs and run paired analysis.
 
 See `RUNBOOK_TO_30_PAIRED.md` and `EXPERIMENT_ROADMAP_TO_30_PAIRED.md` for protocol details.
+
+The manuscript-facing canonical replacement for Sections 2.6–2.7 is maintained in
+`MANUSCRIPT_SECTIONS_2_6_2_7.md` so the paper nomenclature and experimental protocol stay
+traceable to the current implementation.

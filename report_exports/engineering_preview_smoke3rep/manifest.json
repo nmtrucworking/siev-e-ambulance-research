@@ -1,0 +1,68 @@
+{
+  "generated_at_utc": "2026-09-29T10:04:31.214385+00:00",
+  "source_metrics": "experiments/smoke_3rep/replication_metrics.csv",
+  "evidence_mode": "engineering_preview_smoke3rep",
+  "final_evidence_ready": false,
+  "n_metric_rows": 36,
+  "scenarios": [
+    "high_demand",
+    "normal",
+    "peak"
+  ],
+  "policies": [
+    "B0",
+    "B3",
+    "B4",
+    "B6"
+  ],
+  "complete_pairs": 9,
+  "pairs_present": 9,
+  "run_summary": {
+    "scenarios": [
+      "normal",
+      "peak",
+      "high_demand"
+    ],
+    "policies": [
+      "B0",
+      "B3",
+      "B4",
+      "B6"
+    ],
+    "replications_per_scenario_requested": 3,
+    "expected_policy_runs": 36,
+    "completed_policy_runs": 36,
+    "failed_policy_runs": 0,
+    "allow_haversine_fallback": true,
+    "final_evidence_ready": false,
+    "warning": "Haversine fallback is smoke-test routing only; results are not final OSMnx network evidence."
+  },
+  "runtime_validation_file_present": true,
+  "tables": [
+    "00_coverage.csv",
+    "00_pairing_audit.csv",
+    "00_validation_status.csv",
+    "01_policy_scenario_summary.csv",
+    "02_paired_b6_comparisons.csv",
+    "03_constraint_violation_summary.csv",
+    "04_b6_solver_diagnostics.csv",
+    "05_report_kpis.csv"
+  ],
+  "figures": [
+    "fig01_feasible_rate.png",
+    "fig01_feasible_rate.svg",
+    "fig02_sla_pass_rate.png",
+    "fig02_sla_pass_rate.svg",
+    "fig03_avg_response_time_min.png",
+    "fig03_avg_response_time_min.svg",
+    "fig04_constraint_violations.png",
+    "fig04_constraint_violations.svg",
+    "fig05_b6_paired_feasibility_effect.png",
+    "fig05_b6_paired_feasibility_effect.svg",
+    "fig06_b6_paired_response_time_effect.png",
+    "fig06_b6_paired_response_time_effect.svg",
+    "fig07_response_feasibility_tradeoff.png",
+    "fig07_response_feasibility_tradeoff.svg"
+  ],
+  "scientific_use_note": "Engineering preview only. Numerical values and figures must not be used as final scientific evidence."
+}

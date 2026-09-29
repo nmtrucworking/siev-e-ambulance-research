@@ -51,6 +51,29 @@
 6. Event order không đi ngược thời gian logic.
 7. `ChargingEnds => SOC_after >= SOC_before`.
 
+## 3.1. Policy nomenclature canonical
+
+Tên policy dùng trong manuscript, code, output và phân tích phải giữ thống nhất là
+`B0`, `B3`, `B4`, `B6`.
+
+- `B0` — naive nearest-dispatch reference. Chỉ yêu cầu ambulance đang available,
+  route reachable, hospital có emergency receiving, và đủ năng lượng vật lý để tới
+  hospital. B0 cố ý **không** enforce specialty/capability, modeled capacity hoặc
+  reserve-SOC. Vì vậy violation của B0 chỉ dùng để mô tả chi phí của một baseline
+  đơn giản; không được diễn giải như một phép so sánh superiority dưới cùng feasible set.
+- `B3` — hospital-aware baseline. Bổ sung hard capability và modeled-capacity
+  feasibility lên các điều kiện cơ bản của B0.
+- `B4` — deterministic EV-feasibility baseline. Bổ sung deterministic SOC reserve,
+  bao gồm năng lượng từ vehicle tới incident, incident tới hospital và hospital tới
+  charger gần nhất, trong khi vẫn giữ capability/capacity hard rules.
+- `B6` — integrated uncertainty-aware ε-constraint MILP. Bổ sung uncertainty buffer
+  cho energy feasibility; chọn một candidate bằng objective response-time +
+  urgency-weighted SLA lateness dưới các ε-bound về transport+wait và energy fraction.
+  Core experiment dùng một pre-specified ε operating rule, không phải full Pareto sweep.
+
+Khi đánh giá marginal value của integration, `B6-B3` và `B6-B4` là các comparator
+quan trọng hơn `B6-B0`, vì B3/B4 chia sẻ nhiều hard-feasibility rules với B6 hơn.
+
 ## 4. Cài môi trường
 
 ```bash
@@ -228,6 +251,16 @@ B6(R030) - B0(R030)
 
 Tương tự B6-B3 và B6-B4.
 
+Phân tích hiện tại (`src/analyze_paired.py`) báo cáo cho từng scenario và metric:
+
+- số paired replications;
+- mean và median paired improvement, được orient sao cho số dương nghĩa là B6 tốt hơn;
+- bootstrap 95% CI trên vector paired differences (5.000 bootstrap samples);
+- paired standardized effect size `dz = mean(diff) / sd(diff)`.
+
+Core analyzer hiện không sinh p-value. Manuscript không được tuyên bố statistical
+significance nếu chưa bổ sung và chạy một paired hypothesis test được pre-specified.
+
 ## 14. Ranh giới khoa học hiện tại
 
 - Hospital capacity là modeled synthetic receiving capacity, không phải bed data thực.
@@ -236,3 +269,4 @@ Tương tự B6-B3 và B6-B4.
 - `charge_trigger_pct`, `charge_target_pct`, handover time và occupancy hold time trong `configs/runtime_model.json` là explicit simulation assumptions cần sensitivity/calibration.
 - B6 operational run dùng một ε operating rule; full Pareto frontier vẫn cần ε-grid sweep riêng nếu đưa vào paper.
 - Energy stress hiện có thể còn yếu; cần sensitivity/low-SOC stress để chứng minh marginal value của B4/B6.
+- Core B0/B3/B4/B6 ladder không phải controlled one-factor-at-a-time ablation. Nếu manuscript giữ RQ về ablation, phải chạy thêm các biến thể `Full-minus-component` riêng.
