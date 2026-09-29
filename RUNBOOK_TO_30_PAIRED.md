@@ -81,25 +81,16 @@ eda_pre_osmnx/osmnx_points.csv
 eda_pre_osmnx/osmnx_bbox.json
 ```
 
-## 7. Chạy Notebook 02 — OSMnx
+## 7. Build OSMnx network
 
-Mở:
+CLI chuẩn (khuyến nghị):
 
-```text
-notebooks/02_Build_OSMnx_Network.ipynb
+```bash
+.venv/bin/python src/build_osmnx_network.py --precheck
+.venv/bin/python src/build_osmnx_network.py
 ```
 
-Đổi:
-
-```python
-RUN_NETWORK = True
-```
-
-Giữ:
-
-```python
-FORCE_REDOWNLOAD = False
-```
+Notebook `notebooks/02_Build_OSMnx_Network.ipynb` chỉ là thin wrapper tương tác. Nếu dùng notebook, đặt `RUN_NETWORK = True`; giữ `FORCE_REDOWNLOAD = False` để ưu tiên graph cache.
 
 Phải sinh:
 

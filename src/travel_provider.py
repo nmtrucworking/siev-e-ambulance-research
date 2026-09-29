@@ -29,7 +29,7 @@ class TravelProvider:
     """Routing provider.
 
     Priority:
-    1) OSMnx cache / graph if Notebook 02 outputs exist.
+    1) OSMnx cache / graph if canonical build artifacts exist.
     2) Explicitly-labeled Haversine fallback for smoke testing only.
 
     The fallback is not valid as final network-routing evidence.
@@ -69,7 +69,7 @@ class TravelProvider:
         if self.mode is None:
             if not allow_haversine_fallback:
                 raise FileNotFoundError(
-                    "OSMnx routing artifacts are missing. Run Notebook 02 with RUN_NETWORK=True, "
+                    "OSMnx routing artifacts are missing. Run `python src/build_osmnx_network.py`, "
                     "or use --allow-haversine-fallback for smoke testing only."
                 )
             self.mode = "haversine_smoke_test"

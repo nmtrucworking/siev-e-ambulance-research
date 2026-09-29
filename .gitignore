@@ -33,6 +33,7 @@ dist/
 archive/
 
 # Generated large/runtime artifacts
+cache/
 # Smoke fixtures under experiments/smoke_* remain versionable.
 data/osmnx/
 data/routing/
