@@ -1,0 +1,152 @@
+{
+  "lock_version": 1,
+  "created_at_utc": "2026-09-29T12:36:56.226959+00:00",
+  "purpose": "Frozen final 30-paired OSMnx experiment pipeline",
+  "python": {
+    "version": "3.13.15",
+    "implementation": "CPython"
+  },
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "osmnx": "2.1.1",
+    "networkx": "3.7",
+    "scikit-learn": "1.9.1"
+  },
+  "git": {
+    "head": "b822039fc5d8c0cb490857bd9bc1e2d384da3e54",
+    "status_porcelain_at_lock": "M scripts/run_30_paired_osmnx.sh\n M src/run_experiment.py\n M src/travel_provider.py\n?? provenance/final_pipeline_lock.json\n?? src/pipeline_lock.py"
+  },
+  "files": {
+    "configs/experiment_30_paired.json": {
+      "sha256": "8fd7e63acc62bfde67f7bae33ab23b275396cb816897af5ca72d59abcb2afda9",
+      "bytes": 631
+    },
+    "configs/runtime_model.json": {
+      "sha256": "54728fdab00bad54d630a65923b1d34ed7a1a4f495720916a7e0c43bcccfad22",
+      "bytes": 806
+    },
+    "data/osmnx/hospital_charger_od.csv": {
+      "sha256": "0e17573bb24050939a622e37da171d7fc703dc7a9f54879b22408e87739a1b5f",
+      "bytes": 1882
+    },
+    "data/osmnx/incident_hospital_od.csv.gz": {
+      "sha256": "0a7f541200e562c4e29aa94a4a5f1e2bc28d7046a2922f8c696747cb1a4950c6",
+      "bytes": 1501514
+    },
+    "data/osmnx/network_metadata.json": {
+      "sha256": "ff2f2bc5368fd63e3f11794153750c2b281062abea3196d66537f1169cbe6572",
+      "bytes": 2078
+    },
+    "data/osmnx/point_node_map.csv": {
+      "sha256": "e9b1e44e3b8c32ec6be468962934c4ee62ce4e8f89844ad0a755078927f978ec",
+      "bytes": 912723
+    },
+    "data/osmnx/snap_qa.csv": {
+      "sha256": "8af98cd89a4b97e197ec96d21a366a45901a8cd1e3e803d8717dfcc03d707b18",
+      "bytes": 326
+    },
+    "data/osmnx/study_graph.graphml": {
+      "sha256": "efb2af7618e8b48c62e0ec35152153529e8b470f486b06190fb33cc1a381df40",
+      "bytes": 91487594
+    },
+    "data/parameter_registry.csv": {
+      "sha256": "f2cd918781e7cb2c0a14002323d57f12a8558965bf5820f2d7b298543eae5aaf",
+      "bytes": 664
+    },
+    "data/sample/charging_stations.csv": {
+      "sha256": "d80c6246dea031e97a434a1c7bb963a114296fe3c7dd3e94ec474b7000c0d9cb",
+      "bytes": 332
+    },
+    "data/sample/fleet_initial.csv.gz": {
+      "sha256": "443ca28fc8102b3c156574caea33f1b98b0300f93c976d18f49dd7478be6d8ff",
+      "bytes": 24169
+    },
+    "data/sample/hospital_capacity_timeseries.csv.gz": {
+      "sha256": "9b277495555332fdd05a05036a235f02e3ec857e941145b0a0c7323686776b93",
+      "bytes": 168938
+    },
+    "data/sample/hospitals.csv": {
+      "sha256": "74937e62a460ac8e90444e155af147ab4f3d7798d4075d227cdf99cde2195601",
+      "bytes": 1119
+    },
+    "data/sample/incidents.csv.gz": {
+      "sha256": "b0c292e0c6764cc3fd577f2554e168220b63adf24a3a25f4d414107fab106c21",
+      "bytes": 207116
+    },
+    "data/sample/replications.csv.gz": {
+      "sha256": "8deacb5535d18939b1274a7dfcbe56fbc3bd57b879c41b5a8599f8c871bc1423",
+      "bytes": 855
+    },
+    "data/sample/scenarios.csv.gz": {
+      "sha256": "fa76eca7bb891a562a018c7b96c1f08ecf9757c6ebf3233b0643acbb4b3cc274",
+      "bytes": 250
+    },
+    "requirements-full.txt": {
+      "sha256": "e6f87cd792f2fc16fd06ca154a95b166904f916e6a8bf08f56c28c2ef0c62f63",
+      "bytes": 97
+    },
+    "requirements.txt": {
+      "sha256": "dba5b484c8035b6c8835be7bb0957a169f3f80b54702abf71bdf9723b18137c8",
+      "bytes": 85
+    },
+    "scripts/run_30_paired_osmnx.sh": {
+      "sha256": "1de63b653f2b5fb230bf2255a27cc66ca86994f12f0aabd71470061bccf6c7ed",
+      "bytes": 807
+    },
+    "src/analyze_paired.py": {
+      "sha256": "a8c9235b0cf301d1f71adc0d1ad792968101ea8e4f3ed2e8a73c7df45e8eb1d8",
+      "bytes": 4097
+    },
+    "src/build_osmnx_network.py": {
+      "sha256": "06ac0871c46360c89b9119209b7fab44b46a3d41caf7727965aa153e821aba89",
+      "bytes": 17878
+    },
+    "src/des_engine.py": {
+      "sha256": "6c64fa665c4a0a463e480d8f98d0864409343a77ada798b335106646a4b9dc87",
+      "bytes": 27913
+    },
+    "src/des_state_machine.py": {
+      "sha256": "d0295b343ab552b6e6b02c490f504a34d256c7dc8d53d313aa433a0abb730106",
+      "bytes": 1862
+    },
+    "src/export_parquet.py": {
+      "sha256": "92b4b9d87212dd80ef129ee96e34bcc4e46021f9f1fbd46ce068c58ff5f32a26",
+      "bytes": 603
+    },
+    "src/generate_dataset.py": {
+      "sha256": "4ae2b32d4438e2ad9121222c15853013e90ee3346d0cd6666b18c3a7ed1df6c2",
+      "bytes": 27986
+    },
+    "src/pipeline_lock.py": {
+      "sha256": "16115f9897464332d1387e19760266e25b58959181a094c864ba3ab93531fd06",
+      "bytes": 5959
+    },
+    "src/policies.py": {
+      "sha256": "b3aaaba999a105056d438f3ce4b5c518916a637d0844d2d30667335f14b4d092",
+      "bytes": 6189
+    },
+    "src/run_experiment.py": {
+      "sha256": "418915247859dd68383a4b4dc66f692d65880ff09878858f25cd587152415261",
+      "bytes": 11252
+    },
+    "src/runtime_io.py": {
+      "sha256": "ccd4240a0e08c5feea30841402cfff496aa38354deceebf0bde5fb29a94b6c88",
+      "bytes": 2357
+    },
+    "src/travel_provider.py": {
+      "sha256": "53518e2ae36b9f20804581074c5603f749e9806a65689376ce31f072566e7121",
+      "bytes": 13007
+    },
+    "src/validate_dataset.py": {
+      "sha256": "da68fce96606cf3649871058e00ad5a3f4dbfae87187d3d443d8df7105f87b4e",
+      "bytes": 3803
+    },
+    "src/validate_runtime_outputs.py": {
+      "sha256": "70e30f2e9ddd22a68efa9dddf0945eae9aeb38a3429c9c515cbc72b0a1288b77",
+      "bytes": 4334
+    }
+  }
+}
