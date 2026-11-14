@@ -1,4 +1,55 @@
-# SIEV E-Ambulance Research Operations
+<p align="center"><img src=".github/assets/research-banner.svg" width="100%" alt="SIEV electric ambulance dispatch research banner" /></p>
+
+<h1 align="center">SIEV E-Ambulance Research</h1>
+<p align="center"><strong>Reproducible evaluation of electric-ambulance dispatch policies</strong></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white" alt="Python 3.13" />
+  <img src="https://img.shields.io/badge/research-synthetic_benchmark-197B81" alt="Synthetic benchmark" />
+  <img src="https://img.shields.io/badge/method-paired_simulation-3B6179" alt="Paired simulation" />
+</p>
+<p align="center">
+  <a href="#research-workflow">Workflow</a> · <a href="#current-status">Evidence</a> · <a href="#requirements-and-setup">Setup</a> · <a href="#scientific-limitations">Limitations</a> · <a href="#research-documentation">Documents</a>
+</p>
+
+## Research at a glance
+
+| | Research layer | Purpose |
+| :--: | --- | --- |
+| <img src=".github/assets/icons/routing.svg" width="34" height="34" alt="Route network icon" /> | **Network & feasibility** | Curated points, OSMnx paths and EV operational constraints |
+| <img src=".github/assets/icons/simulation.svg" width="34" height="34" alt="Simulation icon" /> | **Policy simulation** | B0/B3/B4/B6 on rolling discrete-event simulation |
+| <img src=".github/assets/icons/evidence.svg" width="34" height="34" alt="Evaluation icon" /> | **Reproducibility** | Paired replications, invariant checks and statistical summaries |
+
+## Research workflow
+
+```mermaid
+flowchart LR
+  D[Synthetic incidents, fleet and facilities] --> QA[Dataset QA]
+  QA --> R[OSMnx routing / free-flow baseline]
+  R --> E[Rolling discrete-event simulation]
+  E --> P[B0 · B3 · B4 · B6 policy runs]
+  P --> V[Invariant and pairing validation]
+  V --> A[Paired comparison and report exports]
+```
+
+```mermaid
+flowchart TB
+  C[Scenario + replication seed] --> B0[B0]
+  C --> B3[B3]
+  C --> B4[B4]
+  C --> B6[B6]
+  B0 --> S[Paired replication summary]
+  B3 --> S
+  B4 --> S
+  B6 --> S
+  S --> O[Directional effect estimates + intervals]
+```
+
+> [!IMPORTANT]
+> **Research boundaries:** The incident/fleet data and receiving-capacity assumptions are synthetic; hospital names and geographic anchors are not evidence of real-time clinical capacity. OSMnx travel times are an uncalibrated free-flow baseline. Results are simulation findings, not validated emergency medical dispatch guidance. The paired replication is the statistical unit, not the individual incident.
+
+---
+
+## Technical report and reproduction
 
 Reproducible research pipeline for evaluating electric-ambulance dispatch policies on a synthetic Ho Chi Minh City benchmark. The repository combines synthetic data generation and validation, OSMnx routing, rolling discrete-event simulation (DES), paired policy evaluation, and report exports.
 
